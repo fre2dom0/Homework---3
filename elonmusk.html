@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elon Musk</title>
+    <script src="https://kit.fontawesome.com/f8bdf83e95.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .ule:focus-within .ull{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ull:hover{
+    display: block;
+}
+
+.ull{
+    z-index: 2;
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    left: 0;
+    top: 50px;
+    background: linear-gradient(90deg, rgba(173,0,0,1) 0%, rgba(204,0,0,1) 48%, rgba(115,0,0,1) 100%);
+}
+
+        .point{
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(40,40,40,1) 48%, rgba(29,29,29,1) 100%);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }   
+
+        .point a{
+            color: white;
+            font-size: 20px;
+            z-index: 2;
+        }
+
+        body{
+            overflow-x: hidden;
+            background: linear-gradient(90deg, rgba(221,221,221,1) 0%, rgba(244,242,242,1) 52%, rgba(200,200,200,1) 100%);
+        }
+
+        nav .mapBanner{
+            background: linear-gradient(90deg, rgba(173,0,0,1) 0%, rgba(204,0,0,1) 48%, rgba(115,0,0,1) 100%);
+        }
+
+    nav .row .map{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+    }
+
+    nav .row .mapLogo h3{
+        margin: 0;
+        padding: 0;
+    }
+
+    nav .row .map ul{
+        margin: 0;
+        text-align: center;
+    }
+
+    nav .row .map ul li{
+        display: inline-block;
+        margin: 0 20px;
+    }
+
+    nav .row .map ul li a{
+        color: rgb(49, 49, 49);
+        font-weight: 600;
+        border-color: rgb(49, 49, 49);
+        transition: all 250ms ease-in-out;
+        text-decoration: none;
+    }
+
+    nav .row .map ul li a:hover{
+        color: rgb(223, 220, 220);
+        border-bottom: 2px solid rgb(223, 220, 220);
+        font-size: 18px;
+    }
+
+    main{
+    width: 100%;
+    min-height: 79vh;
+    margin: 0;
+    padding: 10px 0;
+    color: rgb(28, 28, 28);
+    }
+
+    main .row .article h3{
+        color: rgb(28, 28, 28);
+        font-size: 22px;
+    }
+    
+    main .row .article p{
+        color: rgb(28, 28, 28);
+        font-weight: 500;
+    }
+
+    main .row .article img{
+        padding: 10px 20px;
+        width:100%;
+         height:500px;
+    }
+    .newscol{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .new{
+        width: 370px;
+        height: 270px;
+        border: 1px solid black;
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+
+    .new h3{
+        margin: 0;
+        font-size: 17px;
+        font-weight: 600;
+        color: white;
+        background: linear-gradient(90deg, rgba(36,35,35,1) 0%, rgba(33,33,33,1) 75%, rgba(0,0,0,1) 100%);
+    }
+
+    .new1{
+        background-image: url("https://i.sdacdn.com/haber/2022/12/02/borsa-haftayi-dususle-kapatti-15469272_300.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        transition: all 500ms ease-in-out;
+    }
+
+    .new2{
+        background-image: url("https://i2.sdacdn.com/haber/2022/12/02/merkezi-kayit-kurulusu-nezdindeki-menkul-15468139_local_sd.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        transition: all 500ms ease-in-out;
+    }
+
+
+
+    main .row a:hover .new{
+    background-size: 110% 110%;
+}
+
+main .row a:hover{
+    text-decoration: none;
+    }
+
+
+
+    </style>
+
+    <link rel="stylesheet" href="./style/footerstyle.css">
+</head>
+<body>
+    <span id="checkPoint"></span>
+    <div class="point">
+        <a href="#checkPoint">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </div>
+    <nav>
+        <div class="mapBanner row">
+
+            <div class="map mapHome col-lg-5">
+                <ul>
+                    <li> <a href="./index.html">Anasayfa</a> </li>
+                    <li tabindex="1" class="ule"> <a href="#">Kategoriler</a>
+                        <ul class="ull">
+                            <li><a href="#">Gündem</a></li>
+                            <li><a href="#">Ekonomi</a></li>
+                            <li><a href="#">Dünya</a></li>
+                            <li><a href="#">Spor</a></li>
+                            <li><a href="#">Magazin</a></li>
+                            <li><a href="#">Kadın</a></li>
+                            <li><a href="#">Sağlık</a></li>
+                            <li><a href="#">Yazarlar</a></li>
+                            <li><a href="#">Teknoloji</a></li>
+                            <li><a href="#">Gastro</a></li>
+                            <li><a href="#">Video</a></li>
+                            <li><a href="#">Keşfet</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="map mapLogo col-lg-2">
+                <h3>LOGO</h3>
+            </div>
+            <div class="map mapInfo col-lg-5">
+                <ul>
+                    <li> <a href="./iletisim.html">İletişim</a></li>
+                    <li><a href="./hakkimizda.html">Hakkımızda</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <div class="container">
+        <main>
+            <div class="row">
+                <div class="article col-lg-8">
+                    <h3>Elon Musk'tan çöken kripto para borsası FTX hakkında bomba iddia: 40 milyon dolar değil, 1 milyar doların üzerinde parayı kayıt dışı olarak aktardılar.</h3>
+                    <p>Tesla CEO'su ve Twitter'ın sahibi Elon Musk, çöken kripto para 
+                        borsası FTX'in kurucusu Sam Bankman-Fried ile ilgili bomba bir iddiada bulundu. Bankman-Fried'in ABD seçimlerinde 
+                        Demokrat Parti'ye 40 milyon dolar değil 1 milyar doların üzerinde parayı kayıt dışı olarak aktardığını öne süren Musk,
+                         "Para bir yere gitti, peki nereye gitti?" dedi.Elon Musk, eski FTX CEO'su Sam Bankman-Fried'ın ABD'de Demokrat Parti'ye
+                          resmi kayıtlarda açıklanandan çok daha büyük bir destekte bulunduğunu öne sürdü. Kayıtlardaki 40 milyon doların sadece
+                           görünen rakam olduğunu ima eden Musk, Bankman-Fried'in demokratlara 1 milyar doların üzerinde bağışta bulunduğunu iddia etti. 
+                           Pek çok kullanıcı Musk'ı kanıt sunmadan suçlamalarda bulunmakla suçlarken kimi kullanıcılar da Bankman-Fried'a tepki göstererek
+                            Musk'a destek verdi. 1 milyar dolar gibi yüklü bir meblağın Demokratlara bir kripto milyarderi tarafından aktarılması ise kara 
+                            para iddialarını gündeme getirdi.</p>
+                            <img  src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.indulgexpress.com%2Fuploads%2Fuser%2Fimagelibrary%2F2020%2F8%2F17%2Foriginal%2FElon-Musk-SpaceX.jpg&f=1&nofb=1&ipt=9ea02a9115a5c86dfddc16eadc4bf49c975f5e20d8083af4f0c1eabdb14332db&ipo=images" alt="">
+                </div>
+                <div class="newscol col-lg-4">
+                    <div class="news row">
+                        <a href="./borsadadusus.html">
+                            <aside class="new new1">
+                                <h3>
+                                    Borsa haftayı düşüşle kapattı!
+                                </h3>
+                            </aside>
+                        </a>
+                    </div>
+                    <div class="news row">
+                        <a href="./rekor.html">
+                            <aside class="new new2">
+                                <h3>
+                                    Merkezi Kayıt Kuruluşu nezdindeki menkul kıymetlerin değeri yaklaşık 7 trilyon lira ile rekor kırdı
+                                </h3>
+                            </aside>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="article col lg 12">
+                    <p>
+                        "PARA BİR YERE GİTTİ, PEKİ NEREYE GİTTİ?"Bir Twitter kullanıcısı, Bankman-Fried'in 10 milyar 
+                            dolardan fazla para çaldıktan sonra hapse girmemek için 40 milyon dolar bağışlamasının tüm zamanların en yüksek Yatırım Getirisi
+                             işlemlerinden biri olduğunu belirtti. Dünyanın en zengin insanı olan Musk ise bu kullanıcıya verdiği yanıtta Bankman-Fried'in
+                              Demokrat Parti'ye verdiği gerçek seçim desteğinin 1 milyar doların üzerinde olduğuna dikkat çekerek, 40 milyar doların yalnızca
+                               kamuya açıklanan rakam olduğunu iddia etti. Musk, "Para bir yere gitti, peki nereye gitti?" dedi.EN BÜYÜK İKİNCİ 
+                               BAĞIŞTIBankman-Fried, 2021-2022 seçim döneminde ünlü milyarder George Soros'tan sonra Demokrat Parti'nin en büyük ikinci 
+                               bağışçısı olmuştu. Kâr amacı gütmeyen organizasyon Opensecrets'e göre, FTX iflas başvurusunda bulunmadan önce Demokratlara 39
+                                milyon 884 bin 256 dolar bağışladı. ABD'de siyasi kampanyalara yapılan bağışların şeffaf olma zorunluluğu bulunuyor. Musk'ın
+                                 iddiaları doğru ise bu durum Joe Biden'ın seçim kampanyasına da yüklü bağışlarda bulunduğu bilinen Bankman-Fried'ın ve 
+                                 Demokratların federal suç işlediği anlamına geliyor. Sözcü'de yer alan habere göre FTX çöküşünde şu ana kadar yaklaşık bir
+                                  milyon müşteri ve yatırımcının milyarlarca dolar kaybettiği tahmin ediliyor. Şirket şu anda müşteri fonlarını yanlış 
+                                  kullanmaktan soruşturuluyor
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footerTakeEmail row">
+            <div class="footer footerEmail col-lg-4">
+                <h3>LOGO</h3>
+            </div>
+            <div class="footer footerDes col-lg-4">
+                <p>Borsa ve piyasalar hakkında uzmanlarımız tarafından yazılan detaylı raporlarımızı e-gazete olarak okumak isterseniz mail adresinizi sağdaki kutucuğa giriniz.</p>
+            </div>
+            <div class="footer footerEmail col-lg-4">
+                    <form action="POST">
+                        <input type="text" name="email" id="email" placeholder="Mailinizi Giriniz...">
+                        <button><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+            </div>
+        </div>
+
+
+        <div class="informations row">
+            <div class="socialMedia col-lg-12">
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>    
+    </footer>
+</body>
+</html>

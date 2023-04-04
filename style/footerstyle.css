@@ -1,0 +1,101 @@
+footer{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+footer .footerTakeEmail{
+    width: 100%;
+    min-height: 50px;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, rgba(173,0,0,1) 0%, rgba(204,0,0,1) 48%, rgba(115,0,0,1) 100%);
+}
+
+footer .footer{
+    margin: 0;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .row .footerDes p{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(221, 221, 221);
+}
+
+footer .row .footerEmail h3{
+    margin: 0;
+    padding: 0;
+}
+
+footer .row .footerEmail form{
+    border: 2px solid white;
+    text-align: center;
+    border-radius: 50px;
+    padding: 10px 5px;
+    color: transparent;
+    width: 80%;
+}
+footer .row .footerEmail form input{
+    width: 80%;
+    color: rgb(211, 211, 211);
+    
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+
+
+footer .row .footerEmail form input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+color: rgb(255, 255, 255);
+opacity: 1; /* Firefox */
+}       
+
+footer .row .footerEmail form button{
+    width: 7%;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+}
+
+footer .row .footerEmail form button:hover{
+    color: rgb(156, 156, 156);
+    cursor: pointer;
+}
+
+footer .informations{
+    width: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(40,40,40,1) 48%, rgba(29,29,29,1) 100%);
+    margin: 0;
+    padding: 0;
+}
+
+footer .informations .socialMedia ul{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+footer .informations .socialMedia ul li{
+    display: inline-block;
+    text-align: center;
+    margin: 0 20px;
+}
+
+footer .informations .socialMedia ul li a{
+    color: white;
+    font-size: 16px;
+}   
+
+footer .informations .socialMedia ul li a:hover{
+    color: rgb(145, 145, 145);
+}

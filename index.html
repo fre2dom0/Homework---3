@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borsa</title>
+
+
+    <script src="https://kit.fontawesome.com/f8bdf83e95.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/navstyle.css">
+    <link rel="stylesheet" href="./style/mainstyle.css">
+    <link rel="stylesheet" href="./style/footerstyle.css">
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body{
+            overflow-x: hidden;
+            background: linear-gradient(90deg, rgba(221,221,221,1) 0%, rgba(244,242,242,1) 52%, rgba(200,200,200,1) 100%);
+        }
+
+        .container-fluid{
+            width: 100%;
+            padding: 0 0px;
+            margin: 0;
+            z-index: 1;
+        }
+        
+        .point{
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(40,40,40,1) 48%, rgba(29,29,29,1) 100%);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }   
+
+        .point a{
+            color: white;
+            font-size: 20px;
+            
+        }
+
+        .chat{
+            cursor: pointer;
+            position: fixed;
+            bottom: 0;
+            right: 150px;
+            background: linear-gradient(90deg, rgba(173,0,0,1) 0%, rgba(204,0,0,1) 48%, rgba(115,0,0,1) 100%);
+            color: white;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            width: 350px;
+            min-height: 20px;
+            z-index: 1;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chat:focus-within .form{
+            display: block;
+        }
+        .chat:focus-within .show{
+            display: none;
+        }
+
+        .chat:focus-within{
+            padding: 10px 0;
+        }
+
+        .chat .show h3{
+            font-size: 14px;
+            margin: 10px 0;
+            font-weight: 400;
+        }
+
+        .chat .form{
+            width: 80%;
+            display: none;
+        }
+
+        .chat .form form{
+            border: 2px solid white;
+            border-radius: 50px;
+            padding: 5px 0px;
+        }
+
+
+        .chat .form form input{
+            text-align: left;
+            background-color:transparent;
+            outline: none;
+            border: none;
+            color: white;
+            width: 80%;
+        }
+
+        .chat .form form input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            text-align: left;
+            color: rgb(255, 255, 255);
+            font-size: 14px;
+            opacity: 1; /* Firefox */
+        }       
+
+        .chat .form form button{
+            outline: none;
+            border: none;
+            color: white;
+            background-color: transparent;
+        }
+
+        .chat .form form button:hover{
+            color: rgb(206, 206, 206);
+            cursor: pointer;
+        }
+
+        /*<i class="fa-solid fa-arrow-up-long"></i>*/
+
+        
+
+    </style>
+
+</head>
+<body>
+    <div class="chat" tabindex="1">
+        <div class="show">
+            <h3>Görüş ve Öneriler İçin Tıkla</h3>
+        </div>
+        <div class="form">
+            <form action="">
+                <input placeholder="Görüş veya Önerilerinizi Yazınız..." type="text">
+                <button><i class="fa-solid fa-share"></i></button>
+            </form>
+        </div>
+    </div>
+    <div>
+        <span id="checkPoint"></span>
+        <div class="point">
+            <a href="#checkPoint">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </div>
+
+        <nav>
+            <div class="row">
+                <div class="stock col-lg-12">
+                    <ul>
+                        <li>
+                            <i class="deci fa-solid fa-caret-down"></i> BIST 100 <span class="dec">4,962,97</span> 
+                        </li>
+
+                        <li>
+                            <i class="inci fa-solid fa-caret-up"></i></i> Dolar <span class="inc">18,6392</span>
+                        </li>
+
+                        <li>
+                            <i class="inci fa-solid fa-caret-up"></i></i> Euro <span class="inc">19,6391</span>
+                        </li>
+
+                        <li>
+                            <i class="deci fa-solid fa-caret-down"></i> Altın <span class="dec">1.077,07</span>
+                        </li>
+
+                        <li>
+                            <i class="deci fa-solid fa-caret-down"></i> Faiz <span class="dec">10,48</span>
+                        </li>
+
+                        <li>
+                            <i class="deci fa-solid fa-caret-down"></i> Bitcoin <span class="dec">16.959,47</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mapBanner row">
+
+                <div class="map mapHome col-lg-5">
+                    <ul>
+                        <li> <a href="./index.html">Anasayfa</a> </li>
+                        <li tabindex="1" class="ule"> <a href="#">Kategoriler</a>
+                            <ul class="ull">
+                                <li><a href="#">Gündem</a></li>
+                                <li><a href="#">Ekonomi</a></li>
+                                <li><a href="#">Dünya</a></li>
+                                <li><a href="#">Spor</a></li>
+                                <li><a href="#">Magazin</a></li>
+                                <li><a href="#">Kadın</a></li>
+                                <li><a href="#">Sağlık</a></li>
+                                <li><a href="#">Yazarlar</a></li>
+                                <li><a href="#">Teknoloji</a></li>
+                                <li><a href="#">Gastro</a></li>
+                                <li><a href="#">Video</a></li>
+                                <li><a href="#">Keşfet</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="map mapLogo col-lg-2">
+                    <h3>LOGO</h3>
+                </div>
+                <div class="map mapInfo col-lg-5">
+                    <ul>
+                        <li> <a href="./iletisim.html">İletişim</a></li>
+                        <li><a href="./hakkimizda.html">Hakkımızda</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+        <div class="container">
+            <main>
+               <div class="row">
+                
+                    <div class="colNew col-lg-4">
+                        <a href="./elonmusk.html">
+                        <div class="new activeNew activeNew1">
+                            <div class="newTitle">
+                                <h3>Elon Musk'tan çöken kripto para borsası FTX hakkında bomba iddia: 40 milyon dolar değil, 1 milyar doların üzerinde parayı kayıt dışı olarak aktardılar.</h3>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+
+                    <div class="colNew col-lg-4">
+                        <a href="./borsadadusus.html">
+                        <div class="new activeNew activeNew2">
+                            <div class="newTitle">
+                                <h3>Borsa haftayı düşüşle kapattı!</h3>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+
+                    <div class="colNew col-lg-4">
+                        <a href="./rekor.html">
+                        <div class="new activeNew activeNew3">
+                            <div class="newTitle">
+                                <h3>Merkezi Kayıt Kuruluşu nezdindeki menkul kıymetlerin değeri yaklaşık 7 trilyon lira ile rekor kırdı</h3>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                
+                    </div>
+
+                    <div class="row">
+
+                        <div class="colNew col-lg-4">
+                            <a href="">
+                            <div class="new">
+                                <div class="newTitle">
+                                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing.</h3>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+
+                        <div class="colNew col-lg-4">
+                            <a href="">
+                            <div class="new">
+                                <div class="newTitle">
+                                    <h3>Lorem ipsum dolor sit amet.</h3>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+
+                        <div class="colNew col-lg-4">
+                            <a href="">
+                            <div class="new">
+                                <div class="newTitle">
+                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, libero!</h3>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                    
+                    </div>
+
+                    <div class="row">
+
+                        <div class="colNew col-lg-4">
+                            <a href="">
+                            <div class="new">
+                                <div class="newTitle">
+                                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing.</h3>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+
+                        <div class="colNew col-lg-4">
+                            <a href="">
+                            <div class="new">
+                                <div class="newTitle">
+                                    <h3>Lorem ipsum dolor sit amet.</h3>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+
+                        <div class="colNew col-lg-4">
+                            <a href="">
+                            <div class="new">
+                                <div class="newTitle">
+                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, libero!</h3>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                    
+                    </div>
+
+                    <div class="row">
+
+                        <div class="colNew col-lg-4">
+                            <a href="">
+                            <div class="new">
+                                <div class="newTitle">
+                                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing.</h3>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+
+                        <div class="colNew col-lg-4">
+                            <a href="">
+                            <div class="new">
+                                <div class="newTitle">
+                                    <h3>Lorem ipsum dolor sit amet.</h3>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+
+                        <div class="colNew col-lg-4">
+                            <a href="">
+                            <div class="new">
+                                <div class="newTitle">
+                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, libero!</h3>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                    
+                    </div>
+               
+            </main>
+        </div>
+
+        <footer>
+                <div class="footerTakeEmail row">
+                    <div class="footer footerEmail col-lg-4">
+                        <h3>LOGO</h3>
+                    </div>
+                    <div class="footer footerDes col-lg-4">
+                        <p>Borsa ve piyasalar hakkında uzmanlarımız tarafından yazılan detaylı raporlarımızı e-gazete olarak okumak isterseniz mail adresinizi sağdaki kutucuğa giriniz.</p>
+                    </div>
+                    <div class="footer footerEmail col-lg-4">
+                            <form action="POST">
+                                <input type="text" name="email" id="email" placeholder="Mailinizi Giriniz...">
+                                <button><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                    </div>
+                </div>
+    
+    
+                <div class="informations row">
+                    <div class="socialMedia col-lg-12">
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>    
+        </footer>
+    </div>
+        
+    
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

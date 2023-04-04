@@ -1,0 +1,64 @@
+main .row .colNew{
+    margin: 0;
+    padding: 10px 5px;
+}
+
+main .row a{
+    color: rgb(39, 39, 39);
+    text-decoration: none;
+}
+
+main .row a:hover .new{
+    background-size: 100% 100%;
+}
+
+main .row a:hover .activeNew{
+    background-size: 110% 110%;
+}
+
+main .row a .new{
+    border: 2px solid black;
+    background-image: url("../photos/default-image-agwest-thumb.jpg");
+    background-size: 37% 30%;
+    background-position: center;
+    height: 270px;
+    display: flex;
+    flex-direction:column;
+    justify-content: end;
+    border-radius: 20px;
+    transition: background-size 500ms ease-in-out;
+}
+
+main .row a .activeNew{
+    border: 2px solid black;
+    background-size: 100% 100%;
+    background-position: center;
+    height: 270px;
+    display: flex;
+    flex-direction:column;
+    justify-content: end;
+    transition: background-size 500ms ease-in-out;
+}
+
+main .row a .activeNew1{
+    background-image: url("/photos/elon-musk-4k-rq.jpg");
+}
+main .row a .activeNew2{
+    background-image: url("https://i.sdacdn.com/haber/2022/12/02/borsa-haftayi-dususle-kapatti-15469272_300.jpg");
+}
+
+main .row a .activeNew3{
+    background-image: url("https://i2.sdacdn.com/haber/2022/12/02/merkezi-kayit-kurulusu-nezdindeki-menkul-15468139_local_sd.jpg");
+}
+
+
+main .row a .new .newTitle h3{
+    margin: 0;
+    padding: 2px;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    border-bottom-right-radius: 13px;
+    border-bottom-left-radius: 13px;
+    background: linear-gradient(90deg, rgba(36,35,35,1) 0%, rgba(33,33,33,1) 75%, rgba(0,0,0,1) 100%);
+}

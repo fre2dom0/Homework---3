@@ -1,0 +1,110 @@
+/*Stock*/
+
+nav{
+    cursor:default;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+nav .row .stock{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(40,40,40,1) 48%, rgba(29,29,29,1) 100%);
+    color: white;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+nav .row .stock ul{
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+nav .row .stock ul li{
+    margin: 5px 20px;
+    display: inline-block;
+}
+
+nav .row ul li .inci{
+    color: rgb(25, 158, 20);
+    position: relative;
+    top: 1.2px;
+}
+
+nav .row ul li .deci{
+    color: rgb(190, 24, 24);
+    position:relative;
+    bottom: 1.2px;
+}
+
+nav .row ul li .inc{
+    color: rgb(25, 158, 20);
+}
+
+nav .row ul li .dec{
+    color: rgb(190, 24, 24);
+}
+
+/*Map*/
+.ule:focus-within .ull{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ull:hover{
+    display: block;
+}
+
+.ull{
+    z-index: 2;
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    left: 0;
+    top: 100px;
+    background: linear-gradient(90deg, rgba(173,0,0,1) 0%, rgba(204,0,0,1) 48%, rgba(115,0,0,1) 100%);
+}
+    
+
+
+nav .mapBanner{
+background: linear-gradient(90deg, rgba(173,0,0,1) 0%, rgba(204,0,0,1) 48%, rgba(115,0,0,1) 100%);
+}
+
+nav .row .map{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav .row .mapLogo h3{
+    margin: 0;
+    padding: 0;
+}
+
+nav .row .map ul{
+    margin: 0;
+    text-align: center;
+}
+
+nav .row .map ul li{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav .row .map ul li a{
+    color: rgb(49, 49, 49);
+    font-weight: 600;
+    border-color: rgb(49, 49, 49);
+    transition: all 250ms ease-in-out;
+    text-decoration: none;
+}
+
+nav .row .map ul li a:hover{
+    color: rgb(223, 220, 220);
+    border-bottom: 2px solid rgb(223, 220, 220);
+    font-size: 18px;
+}
